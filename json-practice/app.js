@@ -1,3 +1,5 @@
+
+// from JSON format to JS object
 // Sample data in JSON format 
 const studentJSON = '{"name": "Saidali", "email": "myEmail@gmail.com", "interests": ["street workouts", "JavaScript", "writing books", "getting a short movies"]}';
 
@@ -20,3 +22,15 @@ console.log("Updated student info in JSON format: " + updatedStudentJSON);
 
 
 
+
+//===================== from JS object to JSON format =============================
+
+// js object 
+const myObj = {
+    name: "Saidali",
+    age: 19,
+    city: "Andijan"
+};
+
+const jsonString = JSON.stringify(myObj);
+console.log("JSON String: " + jsonString); // {"name":"Saidali", "age":"19", "city":"Andijan"}
