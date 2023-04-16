@@ -23,7 +23,7 @@ console.log("Updated student info in JSON format: " + updatedStudentJSON);
 
 
 
-//===================== from JS object to JSON format =============================
+// ===================== from JS object to JSON format =============================
 
 // js object 
 const myObj = {
@@ -34,3 +34,36 @@ const myObj = {
 
 const jsonString = JSON.stringify(myObj);
 console.log("JSON String: " + jsonString); // {"name":"Saidali", "age":"19", "city":"Andijan"}
+
+
+
+
+
+// ===================== SetItem =====================
+// create and object to be stored
+const person = {
+  name: "Saidali",
+  age: 19,
+  weight: 64,
+  height: 1.82
+}
+
+// convert the object to JSON string
+const personJSON = JSON.stringify(person);
+
+//Store the JSON string in local storage with a key
+localStorage.setItem("person", personJSON);
+
+console.log("has been stored in local storage");
+
+
+
+// ===================== GetItem =====================
+// retrieve the JSON string from local storage using the key
+const personJSON2 = localStorage.getItem("person");
+
+// convert the JSON string to an object
+const person1 = JSON.parse(personJSON);
+
+console.log("Retrieved item from local storage: ");
+console.log(person1);
